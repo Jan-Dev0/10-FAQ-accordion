@@ -1,0 +1,146 @@
+/* General reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* CSS variables */
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+}
+
+/* Global styles */
+
+html {
+  font-size: 62.5%; /* 1 rem = 10px */
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  color: var(--dark-purple);
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-color: var(--light-pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15rem;
+}
+
+/* Accordion styles */
+
+.accordion {
+  background-color: var(--white);
+  min-width: 35rem;
+  max-width: 78rem;
+  display: flex;
+  flex-direction: column;
+  margin: 3.2rem;
+  padding: 3.2rem;
+  border-radius: 15px;
+}
+.accordion__heading-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  .accordion__star {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .accordion__heading {
+    font-weight: 700;
+  }
+}
+
+.accordion__item {
+  border-bottom: 1px solid var(--grayish-purple);
+  padding: 1.6rem 0;
+}
+ .accordion__item:last-of-type {
+  border-bottom: none; 
+  padding-bottom: 0;
+}
+
+.accordion__item:focus {
+  outline: none;
+  box-shadow: 1px 1px 1px 1px hsl(292, 16%, 49%, 0.5); 
+}
+
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion__header-text {
+  font-weight: 600;
+  width: 75%;
+}
+.accordion__icon {
+  background: url(./assets/images/icon-plus.svg) no-repeat center;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-left: auto;
+}
+.accordion__panel {
+  display: none;
+}
+
+.accordion__item.open .accordion__panel {
+  display: block;
+}
+
+.accordion__item.open .accordion__icon {
+  background-image: url(./assets/images/icon-minus.svg);
+}
+
+/* Responisve styles for desktop view */
+
+@media (min-width: 47.5rem) {
+    body {
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+        background-position:  0 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
