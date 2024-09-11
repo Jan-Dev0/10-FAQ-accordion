@@ -60,6 +60,7 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
+  background-attachment: fixed;
   background-color: var(--light-pink);
   display: flex;
   flex-direction: column;
