@@ -93,7 +93,7 @@ body {
 }
 
 .accordion__item {
-  border-bottom: 1px solid var(--grayish-purple);
+  border-bottom: 1px solid lightgray;
   padding: 1.6rem 0;
 }
  .accordion__item:last-of-type {
@@ -123,6 +123,7 @@ body {
   margin-left: auto;
 }
 .accordion__panel {
+  padding-top: 1rem;
   display: none;
 }
 
